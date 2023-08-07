@@ -1,0 +1,31 @@
+{
+  "name": "nodejs_crud",
+  "version": "1.0.0",
+  "description": "This repository contains a simple CRUD (Create, Read, Update, Delete) application using MongoDB as the database.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "mocha --timeout 200000",
+    "dev": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "joi": "^17.9.2",
+    "mongodb": "^5.7.0",
+    "mongoose": "^6.11.3"
+  },
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "chai-http": "^4.3.0",
+    "mocha": "^10.2.0",
+    "should": "^13.2.3",
+    "supertest": "^6.2.3"
+  },
+  "directories": {
+    "test": "test"
+  }
+}
