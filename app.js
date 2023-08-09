@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 require('dotenv').config();
 const taskRouter = require("./routes/TaskRoutes"); 
+const userRouter = require("./routes/UserRoutes");
 
 const app = express();
 
@@ -11,13 +12,9 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/api/tasks", taskRouter);
+app.use("/auth", userRouter);
 
-// normal route
-app.get("/", (req, res) => {
-  res.send("Hello, World!");
-});
-
-// Connect to mongodb
+// Connect to mongodb and start server
 async function startServer() {
   try {
     await mongoose.connect(process.env.MONGODB_URI, {
